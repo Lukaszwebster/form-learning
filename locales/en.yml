@@ -1,0 +1,20 @@
+button:
+  about: About
+  back: Back
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+  blog: Blog
+  review: Review
+  tips: Tips
+  alerts: Alerts
+ 
+intro:
+  title: Discover Your Life, Travel Where You Want
+  desc: Would you explore natur paradise in the world, let’s find the best destination in world with us.
+  dynamic-route: Demo of dynamic route
+  hi: Hi, {name}!
+  aka: Also known as
+  whats-your-name: What's your name?
+not-found: Not found
