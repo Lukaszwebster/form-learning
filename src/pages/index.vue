@@ -5,7 +5,7 @@ import { toTypedSchema } from '@vee-validate/zod'
 
 const { t } = useI18n()
 function handleSubmit(values) {
-  console.log(values)
+  // console.log(values)
 }
 const genderSelectOptions = [{
   label: 'Male',
@@ -14,7 +14,10 @@ const genderSelectOptions = [{
 {
   label: 'Female',
   value: 'F',
-}]
+},
+
+]
+
 const schema = z.object({
   firstName: z.string().min(2, { message: 'too short name' }),
   lastName: z.string().min(2, { message: 'too short last name' }),
@@ -24,8 +27,8 @@ const schema = z.object({
   gender: z.object({
     label: z.string(),
     value: z.string(),
-  }, { required_error: 'zaznacz opcje' },
-  ),
+  }, { required_error: 'zaznacz opcje' }),
+  regulations: z.boolean().refine(v => v === true, 'To pole jest wymagane'),
 
 }).refine(data => data.password === data.repeatPassword, {
   message: 'Password dont match',
@@ -64,6 +67,15 @@ const selectedGender = ref()
             <AppButton type="submit">
               Submit
             </AppButton>
+            <div class="flex gap-4">
+              <AppInputCheckbox name="regulations" label="I agree" />
+
+              <div class="flex items-center">
+                <p>Wybierz kolor</p>
+                <AppInputCheckbox name="blue" label="blue" />
+                <AppInputCheckbox name="green" label="green" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

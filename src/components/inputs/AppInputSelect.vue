@@ -20,7 +20,7 @@ const { value, handleChange, errorMessage, handleBlur, meta } = useField(name, u
 
 <template>
   <div>
-    <label v-if="props.label" class="mb-[8px] ml-[40px] mt-[8px] block text-[14px] text-white" :for="name">{{ props.label }}</label>
+    <label v-if="props.label" class="mb-[8px] ml-[40px] mt-[8px] block text-[14px] text-white" :for="name">{{ props.label }} </label>
     <VueMultiselect :id="name" v-bind="attrs" :model-value="value" @update:model-value="handleChange" />
     <p v-if="errorMessage" class="text-white">
       {{ errorMessage }}

@@ -11,8 +11,9 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppButton: typeof import('./components/AppButton.vue')['default']
     AppForm: typeof import('./components/AppForm.vue')['default']
-    AppInput: typeof import('./components/AppInput.vue')['default']
-    AppInputSelect: typeof import('./components/TheTravelFilter/AppInputSelect.vue')['default']
+    AppInput: typeof import('./components/inputs/AppInput.vue')['default']
+    AppInputCheckbox: typeof import('./components/inputs/AppInputCheckbox.vue')['default']
+    AppInputSelect: typeof import('./components/inputs/AppInputSelect.vue')['default']
     AppMain: typeof import('./components/AppMain.vue')['default']
     AppOffersCard: typeof import('./components/TheOffers/AppOffersCard.vue')['default']
     AppTabs: typeof import('./components/AppTabs.vue')['default']
