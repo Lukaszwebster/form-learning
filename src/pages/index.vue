@@ -18,6 +18,21 @@ const genderSelectOptions = [{
 
 ]
 
+const radioOptions = [{
+  label: '1 month',
+  value: '1m',
+},
+{
+  label: '3 months',
+  value: '3m',
+},
+{
+  label: '1 week',
+  value: '1w',
+},
+
+]
+
 const schema = z.object({
   firstName: z.string().min(2, { message: 'too short name' }),
   lastName: z.string().min(2, { message: 'too short last name' }),
@@ -29,6 +44,7 @@ const schema = z.object({
     value: z.string(),
   }, { required_error: 'zaznacz opcje' }),
   regulations: z.boolean().refine(v => v === true, 'To pole jest wymagane'),
+  noticePeriod: z.string(),
 
 }).refine(data => data.password === data.repeatPassword, {
   message: 'Password dont match',
@@ -78,6 +94,9 @@ const selectedGender = ref()
             </div>
           </div>
         </div>
+      </div>
+      <div class="mt-10 flex items-center justify-center">
+        <AppInputRadioGroup name="noticePeriod" label="Długość okresu wypowiedzenia" :options="radioOptions" />
       </div>
     </Form>
   </div>

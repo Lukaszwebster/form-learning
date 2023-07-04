@@ -13,6 +13,8 @@ declare module '@vue/runtime-core' {
     AppForm: typeof import('./components/AppForm.vue')['default']
     AppInput: typeof import('./components/inputs/AppInput.vue')['default']
     AppInputCheckbox: typeof import('./components/inputs/AppInputCheckbox.vue')['default']
+    AppInputRadio: typeof import('./components/inputs/AppInputRadio.vue')['default']
+    AppInputRadioGroup: typeof import('./components/inputs/AppInputRadioGroup.vue')['default']
     AppInputSelect: typeof import('./components/inputs/AppInputSelect.vue')['default']
     AppMain: typeof import('./components/AppMain.vue')['default']
     AppOffersCard: typeof import('./components/TheOffers/AppOffersCard.vue')['default']
